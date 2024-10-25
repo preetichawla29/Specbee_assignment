@@ -40,15 +40,7 @@ speaker:
   js:
     dist/js/00-examples/speaker/speaker.js: {}
 
-popup:
-  css:
-    component:
-      dist/css/00-examples/modal-popup/modal-popup.css: {}
-  js:
-    dist/js/00-examples/modal-popup/modal-popup.js: {}
-
 slick:
-  version: 1.x
   css:
     theme:
       https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: { type: external }
@@ -57,6 +49,15 @@ slick:
     https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: { type: external }
   dependencies:
     - core/jquery
+    - core/once
+    - core/drupal
+
+popup:
+  css:
+    component:
+      dist/css/00-examples/modal-popup/modal-popup.css: {}
+  js:
+    dist/js/00-examples/modal-popup/modal-popup.js: {}
 
 
 job_listing:

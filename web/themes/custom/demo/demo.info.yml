@@ -27,4 +27,3 @@ regions:
 components:
   namespaces:
     examples: 'components/00-examples'
-

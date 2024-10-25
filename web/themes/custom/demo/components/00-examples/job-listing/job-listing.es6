@@ -1,25 +1,34 @@
 // Define all functions first
-function onDomContentLoaded() {
-  // Fetch jobs from API
-  fetch('https://dummy-rest-api.specbee.site/api/v1/jobs')
-    .then(handleFetchResponse)
-    .then(renderJobListings)
-    .catch(handleFetchError);
-}
-
 function handleFetchResponse(response) {
   return response.json();
 }
 
-function renderJobListings(data) {
-  const jobContainer = document.querySelector('.job-listings');
+function handleFetchError() {
+  // Display an error message without console logging
   const messageDiv = document.querySelector('.job-message');
+  if (messageDiv) {
+    messageDiv.textContent = 'Error fetching jobs. Please try again later.';
+    messageDiv.style.display = 'flex';
+    messageDiv.style.opacity = '1';
+  }
+}
 
-  // Clear existing job listings
-  jobContainer.innerHTML = ''; // Clear the container
+function removeJobCard(jobCard, messageDiv) {
+  // Remove job card
+  jobCard.remove();
+  if (messageDiv) {
+    messageDiv.style.display = 'flex';
+    messageDiv.style.opacity = '1';
+  }
 
-  // Loop through the data and create job cards
-  data.forEach(createJobCard.bind(null, jobContainer, messageDiv));
+  // Fade out message after 3 seconds
+  setTimeout(() => {
+    messageDiv.style.transition = 'opacity 0.5s';
+    messageDiv.style.opacity = '0';
+    setTimeout(() => {
+      messageDiv.style.display = 'none';
+    }, 500);
+  }, 3000);
 }
 
 function createJobCard(jobContainer, messageDiv, job) {
@@ -58,26 +67,23 @@ function createJobCard(jobContainer, messageDiv, job) {
     });
 }
 
-function removeJobCard(jobCard, messageDiv) {
-  // Remove job card
-  jobCard.remove();
-  if (messageDiv) {
-    messageDiv.style.display = 'flex';
-    messageDiv.style.opacity = '1';
-  }
+function renderJobListings(data) {
+  const jobContainer = document.querySelector('.job-listings');
+  const messageDiv = document.querySelector('.job-message');
 
-  // Fade out message after 3 seconds
-  setTimeout(() => {
-    messageDiv.style.transition = 'opacity 0.5s';
-    messageDiv.style.opacity = '0';
-    setTimeout(() => {
-      messageDiv.style.display = 'none';
-    }, 500);
-  }, 3000);
+  // Clear existing job listings
+  jobContainer.innerHTML = ''; // Clear the container
+
+  // Loop through the data and create job cards
+  data.forEach(createJobCard.bind(null, jobContainer, messageDiv));
 }
 
-function handleFetchError(error) {
-  console.error('Error fetching jobs:', error);
+function onDomContentLoaded() {
+  // Fetch jobs from API
+  fetch('https://dummy-rest-api.specbee.site/api/v1/jobs')
+    .then(handleFetchResponse)
+    .then(renderJobListings)
+    .catch(handleFetchError);
 }
 
 // Add event listener for DOMContentLoaded

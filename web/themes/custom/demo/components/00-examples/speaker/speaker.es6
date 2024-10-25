@@ -1,5 +1,5 @@
 (function speakerComponentInit($, Drupal) {
-  Drupal.behaviors.speaker = {
+  Drupal.behaviors.speakerSlider = {
     attach(context) {
       // Initialize Slick only if the element exists
       const $slickListing = $('.speaker-cards-listing', context);

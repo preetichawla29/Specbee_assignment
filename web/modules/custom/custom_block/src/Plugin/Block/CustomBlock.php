@@ -27,7 +27,7 @@ class CustomBlock extends BlockBase {
       '#title' => $title,
       '#attached' => [
         'library' => [
-          'custom_block/custom_block', // Attach custom JS and CSS.
+          'custom_block/custom_block',
         ],
       ],
     ];
@@ -51,5 +51,5 @@ class CustomBlock extends BlockBase {
   public function blockSubmit($form, FormStateInterface $form_state) {
     $this->configuration['title'] = $form_state->getValue('title');
   }
-}
 
+}
