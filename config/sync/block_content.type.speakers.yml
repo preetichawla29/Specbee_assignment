@@ -1,0 +1,8 @@
+uuid: 8c3dca65-3a7b-4292-b1bf-93979761d282
+langcode: en
+status: true
+dependencies: {  }
+id: speakers
+label: Speakers
+revision: false
+description: null

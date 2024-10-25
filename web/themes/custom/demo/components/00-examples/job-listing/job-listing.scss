@@ -1,0 +1,89 @@
+@use '../../../src/scss/settings' as *;
+
+.job-posting {
+
+  .block__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 79px;
+    margin-bottom: 0;
+    text-align: center;
+    color: $color--white;
+    background: $color--blue;
+    font-size: $font-size--ml;
+  }
+
+  .job-listings-component {  
+    border: 3px solid $color--blue;
+    .job-message {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      height: 167px;
+      margin-top: 10px; 
+      padding: 10px;
+      border-bottom: 1px solid $border--color;
+      font-size: $font-size--m;
+      font-weight: $font-weight;
+    }
+
+    .job-listings {
+      width: 100%;
+    }
+
+    .job-card {
+      position: relative;
+      width: 100%;
+      padding: 15px 20px;
+      text-align: left;
+      border-bottom: 1px solid $border--color;
+      background: $color--white;
+      
+      .job-details {
+        h3 {
+          margin: 0;
+          color: $color--blue;
+          font-size: $font-size--m;
+          font-weight: $font-weight--medium + 100;
+        }
+        
+        p {
+          margin: 0;
+        }
+
+        .job-location {
+          color: $color--dark-grey;
+          font-size: $font-size;
+          font-weight: $font-weight--medium + 100;
+        }
+
+        .job-remote {
+          color: $color--yellow;
+          font-size: $font-size;
+          font-weight: $font-weight--medium;
+        }
+      }
+
+      .job-remove {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: none;
+        cursor: pointer;
+        font-size: $font-size--m;
+      }
+
+      &:hover {
+        .job-remove {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    max-width: 570px;
+  }
+}
+  

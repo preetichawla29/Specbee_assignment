@@ -1,0 +1,8 @@
+{% if target is not empty %}
+  {% set attributes = attributes.setAttribute('target', target) %}
+{% endif %}
+<a {{ attributes.addClass('my-cta') }} href="{{ href }}">
+  {{ text }}
+</a>
+
+{{ attach_library('demo/cta') }}

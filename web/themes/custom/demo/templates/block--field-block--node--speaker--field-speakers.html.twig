@@ -1,0 +1,20 @@
+{{dump(content)}}
+
+{{block}}
+{# Accessing the speaker's content #}
+{% for speaker in content.field_speakers %}
+  <div class="speaker-card">
+    {# Accessing the speaker image #}
+    {# <img src="{{ speaker.entity.field_speaker_image.entity.uri.value | file_url }}" alt="{{ speaker.entity.field_name.value }}"> #}
+    
+    {# Accessing the speaker name #}
+    <h3>{{ speaker.entity.field_name.value }}</h3>
+    
+    {# Accessing the speaker bio #}
+    <p>{{ speaker.entity.field_bio.value }}</p>
+
+    {# Accessing the speaker job title #}
+    <p>{{ speaker.entity.field_job_title.value }}</p>
+  </div>
+{% endfor %}
+

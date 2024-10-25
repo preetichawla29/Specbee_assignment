@@ -1,0 +1,29 @@
+uuid: c48bff46-865d-451b-8ee7-634f859e6af6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.speakers
+    - field.storage.block_content.field_nvjkvjv
+    - node.type.speaker
+id: block_content.speakers.field_nvjkvjv
+field_name: field_nvjkvjv
+entity_type: block_content
+bundle: speakers
+label: 'Speaker Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      speaker: speaker
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

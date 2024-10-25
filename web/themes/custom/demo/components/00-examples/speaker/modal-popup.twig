@@ -1,0 +1,25 @@
+{% set modal_popup = 'modal-popup' %}
+
+<!-- Modal Popup Structure -->
+<div {{ bem(modal_popup) }} id="speaker-modal" style="display: none;">
+  <div class="{{ modal_popup ~ '__content' }}">
+    <span class="{{ modal_popup ~ '__close' }}" aria-label="Close modal">&times;</span>
+    <div class="{{ modal_popup ~ '__data' }} speaker-card">
+      <div class="speaker-card__list">
+        <div class="speaker-card__image">
+          <img src="" alt="Speaker Image" id="modal-speaker-image">
+        </div>
+        <div class="speaker-card__details">
+          <div class="speaker-card__name" id="modal-speaker-name"></div>
+          <div class="speaker-card__title" id="modal-speaker-title"></div>
+          <div class="speaker-card__bio" id="modal-speaker-bio"></div>
+        </div>
+      </div>
+      <div class="speaker-card__description" id="data-speaker-description"></div>
+    </div>
+  </div>
+</div>
+
+{# Attach necessary libraries for modal functionality #}
+{{ attach_library('demo/speaker') }}
+{{ attach_library('demo/popup') }}

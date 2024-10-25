@@ -1,0 +1,67 @@
+# Global style
+global:
+  css:
+    base:
+      dist/css/base/base.css: {}
+      dist/css/base/typography.css: {}
+    layout:
+      dist/css/base/layout/layout.css: {}
+    component:
+      dist/css/base/components/components.css: {}
+  js:
+    dist/js/main.js: {}
+
+# Component styling
+card:
+  css:
+    component:
+      dist/css/component/card.css: {}
+
+# Page specific styles
+index:
+  css:
+    theme:
+      dist/css/theme/index.css: {}
+
+# Admin styles
+admin:
+  css:
+    theme:
+      dist/css/admin/admin.css: { preprocess: false }
+
+# Speaker component
+speaker:
+  css:
+    component:
+      dist/css/00-examples/speaker/speaker.css: {}
+      dist/css/00-examples/speaker/slick-custom.css: {}
+      dist/css/00-examples/my-cta/my-cta.css: {}
+    
+  js:
+    dist/js/00-examples/speaker/speaker.js: {}
+
+popup:
+  css:
+    component:
+      dist/css/00-examples/modal-popup/modal-popup.css: {}
+  js:
+    dist/js/00-examples/modal-popup/modal-popup.js: {}
+
+slick:
+  version: 1.x
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: { type: external }
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css: { type: external }
+  js:
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: { type: external }
+  dependencies:
+    - core/jquery
+
+
+job_listing:
+  css:
+    component:
+      dist/css/00-examples/job-listing/job-listing.css: {}
+  js:
+    dist/js/00-examples/job-listing/job-listing.js: {}

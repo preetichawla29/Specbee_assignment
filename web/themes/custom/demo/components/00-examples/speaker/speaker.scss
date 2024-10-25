@@ -1,0 +1,106 @@
+@use '../../../src/scss/settings' as *;
+
+.speaker-component {
+	position: relative;
+
+  h2 {
+    text-align: center;
+    color: $color--black;
+    font-family: $font-family;
+    font-size: $font-size--xxl;
+    font-weight: $font-weight--medium + 100;
+    line-height: $line-height;
+  }
+
+  .speaker-cards-listing {
+    text-align: center;
+
+    a {
+      text-decoration: none;
+			&:focus {
+				outline: none;
+			}
+    }
+
+		
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: $color--grey;
+      font-size: 30px;
+    }
+  }
+}
+
+.speaker-card {
+	flex-shrink: 0;
+	width: 100%;
+	transition: transform 0.3s ease;
+	text-align: center;
+	border-radius: 10px;
+	background: $color--white;
+	box-shadow: none;
+	row-gap: 10px;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    img {
+      width: 150px;
+      height: 150px;
+			margin: 0 auto 15px;
+      border-radius: 50%;
+      
+    }
+  }
+
+  &__name {
+    color: $color--black;
+    font-size: $font-size--ml;
+  }
+
+  &__title {
+    margin-top: 5px;
+    color: $color--black;
+    font-size: $font-size--m;
+  }
+
+  &__bio {
+    margin-top: 5px;
+    color: $color--grey;
+    font-size: $font-size;
+  }
+
+  &__list {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+    min-width: 368px;
+  }
+
+  &__details {
+    margin-left: 16px;
+  }
+
+  &__description {
+		margin-left: 16px;
+		padding: 20px 16px;
+    border-left: 1px solid $color-grey-01;
+    font-size: $font-size--m;
+  }
+
+	@include breakpoint(md) {
+		max-width: 250px;
+	}
+
+	@include breakpoint(sm) {
+		max-width: 285px;
+		margin: 0 auto;
+		padding: 20px 5px;
+		box-shadow: 4px 10px 24px 1px rgba(0 0 0 / 10%);
+	}
+}
+

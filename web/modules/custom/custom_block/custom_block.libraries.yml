@@ -1,0 +1,10 @@
+custom_block:
+  version: 1.x
+  css:
+    theme:
+      css/custom_block.css: {}
+  js:
+    js/custom_block.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

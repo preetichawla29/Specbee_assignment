@@ -1,0 +1,27 @@
+{% set speaker_card = 'speaker-card'%}
+
+<a href="#" class="open-popup" data-speaker-image="{{ speakerImage }}" 
+  data-speaker-name="{{ speakerName }}" 
+  data-speaker-title="{{ speakerTitle }}"
+  data-speaker-bio="{{ speakerBio }}"
+  data-speaker-description="{{ speakerDescription }}" >
+  <div {{ bem(speaker_card) }}>
+    <div class="speaker-card__image">
+      <img src="{{ speakerImage }}" alt="{{ speakerName }}">
+    </div>
+    <div class="speaker-card__name">
+      {{ speakerName }}
+    </div>
+    <div class="speaker-card__title">
+      {{ speakerTitle }}
+    </div>
+    <div class="speaker-card__bio">
+      {{ speakerBio }}
+    </div>
+  </div>
+
+</a>
+
+{{ attach_library('demo/speaker') }}
+{{ attach_library('demo/slick') }}
+{{ attach_library('demo/popup') }}

@@ -1,0 +1,34 @@
+uuid: 1fbb7bb4-d167-4ada-a5ab-063093107d2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.speaker.field_bio
+    - field.field.node.speaker.field_description
+    - field.field.node.speaker.field_job_title
+    - field.field.node.speaker.field_name
+    - field.field.node.speaker.field_photo
+    - field.field.node.speaker.field_speakers
+    - field.field.node.speaker.layout_builder__layout
+    - node.type.speaker
+  module:
+    - user
+id: node.speaker.teaser
+targetEntityType: node
+bundle: speaker
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bio: true
+  field_description: true
+  field_job_title: true
+  field_name: true
+  field_photo: true
+  field_speakers: true
+  layout_builder__layout: true

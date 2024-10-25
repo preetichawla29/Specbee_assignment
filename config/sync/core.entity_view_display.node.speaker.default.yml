@@ -1,0 +1,192 @@
+uuid: 0a5e8b6d-2466-4070-9041-c6e18df1e952
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.speaker.field_bio
+    - field.field.node.speaker.field_description
+    - field.field.node.speaker.field_job_title
+    - field.field.node.speaker.field_name
+    - field.field.node.speaker.field_photo
+    - field.field.node.speaker.field_speakers
+    - field.field.node.speaker.layout_builder__layout
+    - node.type.speaker
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5317f9ab-8e31-4738-abd1-fc793a2b7861:
+            uuid: 5317f9ab-8e31-4738-abd1-fc793a2b7861
+            region: content
+            configuration:
+              id: 'extra_field_block:node:speaker:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          b9a72e33-6d07-4295-b411-3a18382d44a2:
+            uuid: b9a72e33-6d07-4295-b411-3a18382d44a2
+            region: content
+            configuration:
+              id: 'field_block:node:speaker:field_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          96837618-20bf-493a-ba8f-b5318108bead:
+            uuid: 96837618-20bf-493a-ba8f-b5318108bead
+            region: content
+            configuration:
+              id: 'field_block:node:speaker:field_job_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          46e0566b-f9d9-421a-9274-ef345d9edaf2:
+            uuid: 46e0566b-f9d9-421a-9274-ef345d9edaf2
+            region: content
+            configuration:
+              id: 'field_block:node:speaker:field_bio'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          21d15bfd-d6cc-4181-b4e8-577c6c939e93:
+            uuid: 21d15bfd-d6cc-4181-b4e8-577c6c939e93
+            region: content
+            configuration:
+              id: 'field_block:node:speaker:field_photo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          85f60c8e-5f53-4522-b967-76a67fc4d454:
+            uuid: 85f60c8e-5f53-4522-b967-76a67fc4d454
+            region: content
+            configuration:
+              id: 'field_block:node:speaker:field_speakers'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          ee04a331-ecf3-4f97-96fb-127418582700:
+            uuid: ee04a331-ecf3-4f97-96fb-127418582700
+            region: content
+            configuration:
+              id: 'field_block:node:speaker:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+        third_party_settings: {  }
+id: node.speaker.default
+targetEntityType: node
+bundle: speaker
+mode: default
+content:
+  field_bio:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_job_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_speakers:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true

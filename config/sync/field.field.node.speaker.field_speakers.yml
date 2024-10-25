@@ -1,0 +1,29 @@
+uuid: 2957da1b-93a6-4c8c-89bb-62f4249e8c88
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.speakers
+    - field.storage.node.field_speakers
+    - node.type.speaker
+id: node.speaker.field_speakers
+field_name: field_speakers
+entity_type: node
+bundle: speaker
+label: Speakers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      speakers: speakers
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

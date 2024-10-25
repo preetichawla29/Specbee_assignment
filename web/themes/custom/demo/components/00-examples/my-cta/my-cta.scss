@@ -1,0 +1,16 @@
+@use '../../../src/scss/settings' as *;
+
+.my-cta {
+	display: block;
+  width: 100%;
+  max-width: 405px;
+  margin: 0 auto;
+  padding: 1em 2em;
+	text-align: center;
+  text-decoration: none;
+  color: $color--white;
+	border-radius: 10px;
+	background-color: $color--blue;
+  font-size: $font-size--l;
+  font-weight: $font-weight--medium;
+}
